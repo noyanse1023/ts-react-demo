@@ -77,7 +77,8 @@
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "prettier": "prettier"
   },
   "browserslist": {
     "production": [
@@ -148,5 +149,10 @@
   },
   "devDependencies": {
     "ts-node": "^9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }  
   }
 }
